@@ -7,7 +7,7 @@ DB_DIR = Path(__file__).resolve().parent
 
 def connect(database_path: Path) -> sqlite3.Connection:
     database_path.parent.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(str(database_path))
+    conn = sqlite3.connect(str(database_path), check_same_thread=False)
     conn.row_factory = sqlite3.Row
     return conn
 
@@ -29,4 +29,3 @@ def refresh_product_fts(conn: sqlite3.Connection) -> None:
         FROM products
         """
     )
-
