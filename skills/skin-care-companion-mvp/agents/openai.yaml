@@ -1,0 +1,7 @@
+interface:
+  display_name: "Skin Care Companion MVP"
+  short_description: "Codex workflow for skin-care MVP changes"
+  default_prompt: "Use $skin-care-companion-mvp to implement the next approved MVP change."
+policy:
+  allow_implicit_invocation: true
+

@@ -1,0 +1,22 @@
+[project]
+name = "skin-care-companion-api"
+version = "0.1.0"
+description = "FastAPI backend for the Skin Care Companion MVP"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.110,<1",
+  "uvicorn[standard]>=0.27,<1",
+  "python-multipart>=0.0.9,<1",
+  "pydantic-settings>=2,<3",
+  "httpx>=0.27,<1",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8,<9",
+  "pytest-asyncio>=0.23,<1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
